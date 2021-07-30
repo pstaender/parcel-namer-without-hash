@@ -8,6 +8,12 @@ If you want to use parcel as pure asset compiler you don't need a content hash (
   $ npm install --save-dev parcel-namer-without-hash
 ```
 
+or
+
+```shell
+  $ yarn add -D parcel-namer-without-hash
+```
+
 Change your `.parcelrc` (see https://v2.parceljs.org/configuration/plugin-configuration/ for more details):
 
 ```json
@@ -24,10 +30,7 @@ After installation, your serve/build/watch pipeline should work out if the box (
 Before:
 
 ```shell
-$ npm run build
-
-> yourproject@1.0.0 build /yourproject
-> parcel build --no-cache --no-minify src/myproject.html
+$ parcel build --no-cache src/myproject.html
 
 ✨ Built in 3.70s
 
@@ -40,10 +43,7 @@ dist/myproject.c4f85a82.js     118.91 KB    1.03s
 After:
 
 ```sh
-$ npm run build
-
-> yourproject@1.0.0 build /yourproject
-> parcel build --no-cache --no-minify src/myproject.html
+$ parcel build --no-cache src/myproject.html
 
 ✨ Built in 3.70s
 
